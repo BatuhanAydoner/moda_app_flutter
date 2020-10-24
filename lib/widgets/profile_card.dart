@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:moda_app_flutter/screens/detail_screen.dart';
 
 class ProfileCard extends StatelessWidget {
   @override
@@ -58,42 +59,78 @@ class ProfileCard extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
-              Container(
-                width: (MediaQuery.of(context).size.width - 100) / 2,
-                height: 200.0,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10.0),
-                    image: DecorationImage(
-                        image: AssetImage("images/modelgrid1.jpeg"),
-                        fit: BoxFit.cover)),
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => DetailScreen(
+                              "images/modelgrid1.jpeg", "modelgrid1")));
+                },
+                child: Hero(
+                  tag: "modelgrid1",
+                  child: Container(
+                    width: (MediaQuery.of(context).size.width - 100) / 2,
+                    height: 200.0,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10.0),
+                        image: DecorationImage(
+                            image: AssetImage("images/modelgrid1.jpeg"),
+                            fit: BoxFit.cover)),
+                  ),
+                ),
               ),
               SizedBox(
                 width: 20.0,
               ),
               Column(
                 children: <Widget>[
-                  Container(
-                    width: (MediaQuery.of(context).size.width - 100) / 2,
-                    height: 95.0,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10.0),
-                        image: DecorationImage(
-                          fit: BoxFit.cover,
-                          image: AssetImage("images/modelgrid2.jpeg"),
-                        )),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => DetailScreen(
+                                  "images/modelgrid2.jpg", "modelgrid2")));
+                    },
+                    child: Hero(
+                      tag: "modelgrid2",
+                      child: Container(
+                        width: (MediaQuery.of(context).size.width - 100) / 2,
+                        height: 95.0,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10.0),
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: AssetImage("images/modelgrid2.jpg"),
+                            )),
+                      ),
+                    ),
                   ),
                   SizedBox(
                     height: 5.0,
                   ),
-                  Container(
-                    width: (MediaQuery.of(context).size.width - 100) / 2,
-                    height: 95.0,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10.0),
-                        image: DecorationImage(
-                          fit: BoxFit.cover,
-                          image: AssetImage("images/modelgrid3.jpeg"),
-                        )),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => DetailScreen(
+                                  "images/modelgrid3.jpeg", "modelgrid3")));
+                    },
+                    child: Hero(
+                      tag: "modelgrid3",
+                      child: Container(
+                        width: (MediaQuery.of(context).size.width - 100) / 2,
+                        height: 95.0,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10.0),
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: AssetImage("images/modelgrid3.jpeg"),
+                            )),
+                      ),
+                    ),
                   ),
                 ],
               ),
