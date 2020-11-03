@@ -1,6 +1,8 @@
 # moda_app_flutter
 
-A new Flutter application.
+A Moda App UI example.
+
+<img src="https://github.com/BatuhanAydonerDev/moda_app_flutter/blob/master/app_gif.gif?raw=true" alt="Moda App" width=350/>
 
 ## Getting Started
 
